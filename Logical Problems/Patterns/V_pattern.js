@@ -14,7 +14,7 @@ for (let i = 1; i <= n; i++) {
         process.stdout.write("  ");
     }
     for (let x = i; x <= i; x++) {
-        if (x >= 5) {
+        if (x >= n) {
             break
         }
         process.stdout.write("* ");

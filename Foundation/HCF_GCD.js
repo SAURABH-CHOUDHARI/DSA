@@ -1,12 +1,9 @@
 let a = Number(prompt("Enter a Number :"));
 let b = Number(prompt("Enter another Number :"));
 
-let res = Math.min(a, b)
 
-while (res > 0) {
-    if (a % res == 0 && b % res == 0) {
-        break;
-    }
-    res--
+while (a != b) {
+    if(a>b) a =a-b;
+    else b= b-a
 }
-console.log(`HCF or GCD pof these two numbers are ${res}`)    
+console.log(`HCF or GCD of these two numbers are ${a}`)    

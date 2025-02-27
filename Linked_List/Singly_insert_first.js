@@ -8,8 +8,10 @@ class Node {
 class LinkedList {
     constructor() {
         this.head = null;
+        this.size = 0;
     }
     insertAtFirst(val) {
+        this.size++
         let newNode = new Node(val)
 
         newNode.next = this.head

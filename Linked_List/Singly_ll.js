@@ -55,6 +55,30 @@ class LinkedList {
     }
     cur.next = null
     }
+    insertAtPos(val,pos){
+        if(pos<1 || this.size + 2 < pos ){
+            console.log("Out of Bound")
+            return
+        }
+        if(pos == 1){
+            this.insertAtfirst(val)
+            return
+        }
+        if(pos == this.size+1){
+            this.insertAtlast(val)
+            return
+        }
+        this.size++
+        let newNode = new Node(val)
+        let cur  = this.head;
+        let i=1;
+        while(i<pos-1){
+            cur = cur.next;
+            i++
+        }
+        newNode.next = cur.next;
+        cur.next = newNode;
+    }
     print() {
         if (this.head == null) {
             console.log("no node ahead")
@@ -79,5 +103,8 @@ newNode.insertAtFirst(50)
 newNode.insertAtlast(10)
 newNode.deleteAtfirst()
 newNode.deleteAtlast()
+newNode.insertAtPos(31,3)
+newNode.insertAtPos(300,4)
+newNode.insertAtPos(333,6)
 
 newNode.print()

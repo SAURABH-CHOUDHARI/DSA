@@ -31,6 +31,18 @@ class LinkedList {
         cur.next= newNode;
         
     }
+    deleteAtfirst(){
+        this.size--
+        if(this.head == null){
+            console.log("no node to delete")
+            return
+        }
+        if (this.head.next == null){
+            this.head = null;
+            return
+        }
+        this.head = this.head.next;
+    }
     print() {
         if (this.head == null) {
             console.log("no node ahead")
@@ -53,5 +65,6 @@ newNode.insertAtFirst(42)
 newNode.insertAtFirst(47)
 newNode.insertAtFirst(50)
 newNode.insertAtlast(10)
+newNode.deleteAtfirst()
 
 newNode.print()

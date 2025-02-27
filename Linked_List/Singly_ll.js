@@ -17,6 +17,20 @@ class LinkedList {
         newNode.next = this.head
         this.head = newNode
     }
+    insertAtlast(val){
+        this.size++
+        let newNode = new Node(val)
+        if(this.head == null){
+            this.head = newNode;
+            return
+        }
+        let cur  = this.head;
+        while(cur.next != null){
+            cur = cur.next 
+        }
+        cur.next= newNode;
+        
+    }
     print() {
         if (this.head == null) {
             console.log("no node ahead")
@@ -38,5 +52,6 @@ newNode.insertAtFirst(40)
 newNode.insertAtFirst(42)
 newNode.insertAtFirst(47)
 newNode.insertAtFirst(50)
+newNode.insertAtlast(10)
 
 newNode.print()

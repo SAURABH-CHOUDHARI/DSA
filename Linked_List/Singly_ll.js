@@ -131,4 +131,5 @@ newNode.insertAtPos(300,4)
 newNode.insertAtPos(333,6)
 newNode.deleteAtPos(3)
 
+console.log(newNode.size)
 newNode.print()

@@ -18,3 +18,17 @@ var detectCycle = function(head) {
     return null
 
 };
+
+//using set
+var detectCycle = function(head) {
+    let cur = head;
+    let set = new Set();
+    let count = 0;
+    while(cur != null){
+        if(set.has(cur))return cur;
+        set.add(cur)
+        cur = cur.next;
+    }
+    return cur
+
+};

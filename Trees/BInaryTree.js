@@ -25,10 +25,19 @@ class Tree{
         this.preorder(root.left)
         this.preorder(root.right)
     }
+    postorder(root){
+        if(root == null)return ;
+        this.postorder(root.left)
+        this.postorder(root.right)
+        process.stdout.write(root.val+ " ");
+    }
 }    
 
 let obj = new Tree();
 obj.root = obj.createTree();
 
 obj.preorder(obj.root)
+console.log()
+
+obj.postorder(obj.root)
 console.log()

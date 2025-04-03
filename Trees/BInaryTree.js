@@ -31,6 +31,12 @@ class Tree{
         this.postorder(root.right)
         process.stdout.write(root.val+ " ");
     }
+    inorder(root){
+        if(root == null)return ;
+        this.inorder(root.left)
+        process.stdout.write(root.val+ " ");
+        this.inorder(root.right)
+    }
 }    
 
 let obj = new Tree();
@@ -41,3 +47,5 @@ console.log()
 
 obj.postorder(obj.root)
 console.log()
+
+obj.inorder(obj.root)

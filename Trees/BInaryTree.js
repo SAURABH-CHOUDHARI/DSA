@@ -19,7 +19,16 @@ class Tree{
         newNode.right = this.createTree();
         return newNode;
     }
+    preorder(root){
+        if(root == null)return ;
+        process.stdout.write(root.val+ " ");
+        this.preorder(root.left)
+        this.preorder(root.right)
+    }
 }    
 
 let obj = new Tree();
 obj.root = obj.createTree();
+
+obj.preorder(obj.root)
+console.log()
